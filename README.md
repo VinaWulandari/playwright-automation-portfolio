@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Playwright Automation Testing Portfolio
 
 Automation testing project using Playwright with JavaScript.
@@ -54,3 +55,7 @@ npx playwright show-report
 
 Vina
 QA Automation Portfolio
+=======
+# playwright-automation-portfolio
+trial portofolio sauce code website
+>>>>>>> e56460b0fb90b521a12b1f2b17bda6747769f4e8
