@@ -33,6 +33,9 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install
 
+      - name: Install Allure CLI
+        run: npm install -D allure-commandline
+
       # 5. Run Playwright tests
       - name: Run Playwright Tests
         run: npx playwright test --reporter=allure-playwright
@@ -65,12 +68,13 @@ jobs:
 
       # 10. Send email with link to artifact
       - name: Send Email with Artifact Link
+        if: always() && steps.run_tests.conclusion != 'skipped'
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
           server_port: 465
           username: ${{ secrets.EMAIL_USER }}
-          password: ${{ secrets.EMAIL_APP_PASSWORD }}
+          password: ${{ secrets.EMAIL_PASS }}
           from: ${{ secrets.EMAIL_USER }}
           to: "tesing.vinaw@gmail.com"
           subject: "Allure Test Report"
