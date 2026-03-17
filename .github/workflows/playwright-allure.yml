@@ -20,7 +20,7 @@ jobs:
 
       # 2. Setup Node.js 24
       - name: Setup Node.js
-        uses: actions/setup-node@v3.12.0
+        uses: actions/setup-node@v3
         with:
           node-version: 24
           cache: 'npm'

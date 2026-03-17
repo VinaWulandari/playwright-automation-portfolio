@@ -75,6 +75,11 @@ const { defineConfig } = require('@playwright/test');
 module.exports = defineConfig({
   testDir: './tests',
 
+  reporter: [
+  ['line'],
+  ['allure-playwright']
+  ],
+
   use: {
     headless: true,
     screenshot: 'only-on-failure'
