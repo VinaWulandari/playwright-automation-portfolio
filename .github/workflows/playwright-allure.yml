@@ -76,7 +76,7 @@ jobs:
           username: ${{ secrets.EMAIL_USER }}
           password: ${{ secrets.EMAIL_PASS }}
           from: ${{ secrets.EMAIL_USER }}
-          to: "tesing.vinaw@gmail.com"
+          to: "testing.vinaw@gmail.com"
           subject: "Allure Test Report"
           body: |
             Playwright Test Automation Finished
