@@ -81,7 +81,10 @@ module.exports = defineConfig({
   ],
 
   use: {
-    headless: true,
+    // → browser tidak membuka UI, sangat cocok untuk CI.
+    // headless: true,
+    // → akan buka browser visible, biasanya untuk debug di lokal.
+    headless: false,
     screenshot: 'only-on-failure'
   }
 
