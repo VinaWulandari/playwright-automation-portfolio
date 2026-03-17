@@ -80,5 +80,6 @@ jobs:
             Failed: ${{ steps.summary.outputs.failed }}
 
             Report attached as allure-report.zip
+          from: ${{ secrets.EMAIL_USER }}
           to: "testing.vinaw@gmail.com"
           attachments: "allure-report.zip"
