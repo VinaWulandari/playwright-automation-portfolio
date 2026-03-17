@@ -35,7 +35,7 @@ jobs:
       
       - name: Zip Playwright report
         run: zip -r playwright-report.zip playwright-report
-        
+
       - name: Send Email
         uses: dawidd6/action-send-mail@v3
         with:
@@ -48,3 +48,6 @@ jobs:
           body: "Playwright tests finished! See attached report."
           secure: true
           attachments: playwright-report/index.html
+
+      - name: List files
+        run: ls -R
